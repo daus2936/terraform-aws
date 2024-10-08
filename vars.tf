@@ -56,10 +56,6 @@ variable dbname {
     default = "accounts"
 }
 
-variable dbname {
-    default = "accounts"
-}
-
 variable instance_count {
     default = "1"
   
