@@ -6,6 +6,11 @@ resource "aws_db_subnet_group" "vprofile-rds-subgrp" {
     }
 }
 
+#esource "aws_db_parameter_group" "my_db_pmg" {
+#  name = "my-db-pg"
+#  family = "mysql5.7"
+#}
+
 resource "aws_elasticache_subnet_group" "vprofile-elasticache-subgrp" {
     name = "vprofile-ecache-subgrp"
     subnet_ids = [ module.vpc.private_subnets[0], module.vpc.private_subnets[1], module.vpc.private_subnets[2]  ]
