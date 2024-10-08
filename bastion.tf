@@ -5,6 +5,7 @@ resource "aws_instance" "vprofile-bastion" {
   subnet_id              = module.vpc.public_subnets[0]
   count                  = var.instance_count
   vpc_security_group_ids = [aws_security_group.vprofile-bastion-sg.id]
+  associate_public_ip_address = true
 
   tags = {
     Name    = "vprofile-bastion"
