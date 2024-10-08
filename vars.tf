@@ -25,11 +25,11 @@ variable AMIS {
 
 
 variable PRIV_KEY_PATH {
-    default = "id_rsa"  
+    default = "/home/ubuntu/.ssh/id_rsa"  
 }
 
 variable PUB_KEY_PATH {
-    default = "id_rsa.pub"  
+    default = "/home/ubuntu/.ssh/id_rsa.pub"  
 }
 
 variable USERNAME {
