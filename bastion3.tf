@@ -19,9 +19,7 @@ resource "aws_instance" "vprofile-bastion" {
 
   provisioner "remote-exec" {
     inline = [
-      "sudo apt update -y",
-      "sudo apt install git mysql-client -y",
-      "chmod +x /tmp/vprofile-dbdeploy.sh",
+      "sudo chmod +x /tmp/vprofile-dbdeploy.sh",
       "sudo /tmp/vprofile-dbdeploy.sh"
     ]
   }
